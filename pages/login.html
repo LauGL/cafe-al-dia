@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
 
+
 <body class="d-flex flex-column vh-100 justify-content-between container-fluid m-0 p-0">
   <header class="fixed-top">
         <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #210E0A ">
@@ -39,10 +40,10 @@
               <a class="nav-link" href="/pages/contacto.html"> Contacto </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link active" href="/pages/Login.html"> Login </a>
+              <a class="nav-link active" href="#"> Login </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="/pages/error404.html"> Tienda</a>
+              <a class="nav-link " href="/pages/tienda.html"> Tienda</a>
             </li>
           </ul>
           <div class="btn-conteiner">
@@ -62,8 +63,31 @@
             <h2>¿Nos tomamos un café?</h2>
             <h6>Introduce tu cuenta a continuación</h6>
         </div>
-        <form class="text">
-          <div class="form-group">
+        <form class="row" style="width: 360px;" >
+          <div class="col-12 mb-3 align-items-center">
+            <img src="../assets/icons8-email-16.png" alt="icono carta">
+            <label class="form-label">Correo</label>
+            <input class="form-control" type="email" id="correo" />
+          </div>
+          <div class="col-12 mb-3">
+            <img src="../assets/icons8-lock-16.png" alt="icono candado">
+            <label class="form-label">Contraseña</label>
+            <input class="form-control" type="password" id="pass" />
+          </div>
+          <li id="linkInicioSesion" class="nav-item"> 
+            <a 
+            id="btn-login"
+            class="btn btn-outline-light"
+            href="/pages/tienda.html">Inicio Sesion</a> 
+          </li>
+          <li class="nav-item">
+            <button id="logOut" class="btn btn-outline-danger">
+              Cerrar sesión
+            </button>
+          </li>
+</form>
+
+          <!-- <div class="form-group">
             <label for="nombre">Usuario:</label>
             <input type="text" class="form-control log bg-light" id="nombre" name="nombre" required placeholder="Nombre de usuario">
           </div>
@@ -72,14 +96,16 @@
             <input type="email" class="form-control log bg-light" id="correo" name="correo" required placeholder="example@example.com">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control log bg-light" id="exampleInputPassword1" minlength="8" required placeholder="*******************************">
+            <label class="form-label">
+              Password
+            </label>
+            <input type="password" class="form-control log bg-light" id="pass" minlength="8" required placeholder="*******************************">
           </div>
           <div class="row">
             <div class="col d-flex justify-content-center">
-              <button class="btn sm mt-3" type="submit">Log in</button>
+              <button class="btn sm mt-3">Log in</button>
             </div>  
-          </div>
+          </div> -->
           
           <div class="row">
             <div class="col d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="modal">
@@ -154,5 +180,7 @@
     crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/user.js"></script>
 </body>
 </html>
